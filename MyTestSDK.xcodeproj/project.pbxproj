@@ -15,6 +15,7 @@
 		04774A4F1DB46EC200F46FF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04774A4D1DB46EC200F46FF1 /* LaunchScreen.storyboard */; };
 		04774A5A1DB46EC300F46FF1 /* MyTestSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04774A591DB46EC300F46FF1 /* MyTestSDKTests.m */; };
 		04774A651DB46EC300F46FF1 /* MyTestSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04774A641DB46EC300F46FF1 /* MyTestSDKUITests.m */; };
+		04774A7A1DB470A900F46FF1 /* libMySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04774A771DB46F3800F46FF1 /* libMySDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 04774A3B1DB46EC100F46FF1;
 			remoteInfo = MyTestSDK;
+		};
+		04774A761DB46F3800F46FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04774A721DB46F3800F46FF1 /* MySDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04774A151DB4645000F46FF1;
+			remoteInfo = MySDK;
+		};
+		04774A781DB4705B00F46FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04774A721DB46F3800F46FF1 /* MySDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 04774A141DB4644A00F46FF1;
+			remoteInfo = MySDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +66,7 @@
 		04774A601DB46EC300F46FF1 /* MyTestSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTestSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04774A641DB46EC300F46FF1 /* MyTestSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTestSDKUITests.m; sourceTree = "<group>"; };
 		04774A661DB46EC300F46FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04774A721DB46F3800F46FF1 /* MySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySDK.xcodeproj; path = ../../MySDK/MySDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04774A7A1DB470A900F46FF1 /* libMySDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +122,7 @@
 				04774A431DB46EC200F46FF1 /* AppDelegate.m */,
 				04774A451DB46EC200F46FF1 /* ViewController.h */,
 				04774A461DB46EC200F46FF1 /* ViewController.m */,
+				04774A721DB46F3800F46FF1 /* MySDK.xcodeproj */,
 				04774A481DB46EC200F46FF1 /* Main.storyboard */,
 				04774A4B1DB46EC200F46FF1 /* Assets.xcassets */,
 				04774A4D1DB46EC200F46FF1 /* LaunchScreen.storyboard */,
@@ -140,6 +158,14 @@
 			path = MyTestSDKUITests;
 			sourceTree = "<group>";
 		};
+		04774A731DB46F3800F46FF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04774A771DB46F3800F46FF1 /* libMySDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +180,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				04774A791DB4705B00F46FF1 /* PBXTargetDependency */,
 			);
 			name = MyTestSDK;
 			productName = MyTestSDK;
@@ -232,6 +259,12 @@
 			mainGroup = 04774A331DB46EC100F46FF1;
 			productRefGroup = 04774A3D1DB46EC100F46FF1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04774A731DB46F3800F46FF1 /* Products */;
+					ProjectRef = 04774A721DB46F3800F46FF1 /* MySDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				04774A3B1DB46EC100F46FF1 /* MyTestSDK */,
@@ -240,6 +273,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04774A771DB46F3800F46FF1 /* libMySDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMySDK.a;
+			remoteRef = 04774A761DB46F3800F46FF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		04774A3A1DB46EC100F46FF1 /* Resources */ = {
@@ -307,6 +350,11 @@
 			isa = PBXTargetDependency;
 			target = 04774A3B1DB46EC100F46FF1 /* MyTestSDK */;
 			targetProxy = 04774A611DB46EC300F46FF1 /* PBXContainerItemProxy */;
+		};
+		04774A791DB4705B00F46FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MySDK;
+			targetProxy = 04774A781DB4705B00F46FF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
